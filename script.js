@@ -1,3 +1,5 @@
+alert("script partito)
+      
 const supabaseUrl = "https://bazubrbkwylvjgqqdurz.supabase.co";
 const supabaseKey = "sb_publishable_b8oWkbN-XRsADQ80ni10xw_Sje4LGhE";
 
@@ -23,7 +25,7 @@ document.getElementById("inizia").addEventListener("click", async () => {
     // Controllo email già registrata
     const { data: esistente, error: erroreRicerca } = await supabase
         .from("Partecipanti")
-        .select("id")
+        .select("email")
         .eq("email", email);
 
     if(erroreRicerca){
