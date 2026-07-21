@@ -6,65 +6,63 @@
 }
 
 body{
-    background:#f6dce5;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
+    background:linear-gradient(180deg,#fdf7f9,#f6dce5);
+    padding:20px;
 }
 
 .container{
-    width:90%;
-    max-width:420px;
-    background:white;
-    border-radius:25px;
+    width:100%;
+    max-width:430px;
+    background:#ffffff;
+    border-radius:30px;
     padding:35px;
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
     text-align:center;
 }
 
 .logo{
-    width:180px;
-    margin-bottom:20px;
+    width:170px;
+    display:block;
+    margin:0 auto 25px;
 }
 
 h1{
-    color:#222;
-    margin-bottom:10px;
+    font-size:34px;
+    color:#333;
+    margin-bottom:15px;
 }
 
 .subtitle{
     color:#666;
-    margin-bottom:25px;
-}
-
-.premi{
-    background:#fdeff4;
-    border-radius:15px;
-    padding:15px;
-    margin-bottom:25px;
-}
-
-.premi div{
-    margin:8px 0;
-    font-size:17px;
+    line-height:1.6;
+    margin-bottom:30px;
 }
 
 input{
     width:100%;
-    padding:14px;
-    border:2px solid #f3c6d4;
-    border-radius:12px;
-    margin-bottom:15px;
+    padding:16px;
+    border:2px solid #f3d3de;
+    border-radius:15px;
+    margin-bottom:18px;
     font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus{
+    border-color:#df5d93;
 }
 
 button{
     width:100%;
-    padding:16px;
+    padding:17px;
     border:none;
-    border-radius:15px;
-    background:#e91e63;
+    border-radius:18px;
+    background:#df5d93;
     color:white;
     font-size:18px;
     font-weight:bold;
@@ -73,5 +71,36 @@ button{
 }
 
 button:hover{
-    background:#c2185b;
+    transform:translateY(-2px);
+    background:#cf3f7d;
+}
+
+.hidden{
+    display:none;
+}
+
+#loading{
+    margin-top:30px;
+    color:#df5d93;
+    font-weight:bold;
+}
+
+#gratta{
+    margin-top:25px;
+}
+
+#scratchCanvas{
+    width:100%;
+    max-width:320px;
+    height:auto;
+    border-radius:18px;
+    border:2px dashed #df5d93;
+    background:#c0c0c0;
+}
+
+#risultato{
+    margin-top:25px;
+    font-size:22px;
+    font-weight:bold;
+    color:#df5d93;
 }
