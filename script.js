@@ -1,5 +1,15 @@
-alert("Il file script.js funziona!");
+const bottone = document.getElementById("inizia");
 
-document.getElementById("inizia").onclick = function () {
-    alert("Hai cliccato il pulsante!");
-};
+bottone.addEventListener("click", function () {
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+
+    if (nome === "" || email === "") {
+        alert("Inserisci nome ed email.");
+        return;
+    }
+
+    alert("Perfetto! Il pulsante funziona.");
+
+});
