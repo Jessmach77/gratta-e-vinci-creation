@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratta e Vinci - Creation Home Made</title>
+    <title>Gratta e Vinci | Creation Home Made</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,25 +12,16 @@
 
 <div class="container">
 
-    <img src="logo.png" class="logo">
+    <img src="logo.png" class="logo" alt="Creation Home Made">
 
     <h1>✨ Gratta e Vinci ✨</h1>
 
     <p class="subtitle">
-        Scopri subito se hai vinto uno dei nostri premi!
+        Inserisci i tuoi dati e scopri subito se hai vinto!
+        <br><br>
+        Se non vinci, parteciperai automaticamente
+        all'estrazione finale del <b>10 Agosto</b>.
     </p>
-
-    <div class="premi">
-
-        <div>🎁 20% di sconto</div>
-
-        <div>🚚 Spedizione gratuita</div>
-
-        <div>💎 Gioiello in regalo</div>
-
-        <div>💳 Buono CHF 30</div>
-
-    </div>
 
     <input
         type="text"
@@ -43,10 +34,25 @@
         placeholder="La tua email">
 
     <button id="gioca">
-
-        GIOCA ORA
-
+        INIZIA A GIOCARE
     </button>
+
+    <div id="loading" class="hidden">
+        <p>✨ Prepariamo il tuo Gratta e Vinci...</p>
+    </div>
+
+    <div id="gratta" class="hidden">
+
+        <h2>Gratta qui 👇</h2>
+
+        <canvas id="scratchCanvas"
+            width="320"
+            height="170">
+        </canvas>
+
+    </div>
+
+    <div id="risultato"></div>
 
 </div>
 
