@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratta e Vinci | Creation Home Made</title>
+    <title>Gratta e Vinci - Creation Home Made</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -14,56 +16,45 @@
 
     <img src="logo.png" class="logo" alt="Creation Home Made">
 
-    <h1>✨ Gratta e Vinci ✨</h1>
+    <h1>🎁 Gratta e Vinci 🎁</h1>
 
-    <p class="subtitle">
+    <p class="intro">
         Inserisci i tuoi dati e scopri subito se hai vinto!
-        <br><br>
-        Se non vinci, parteciperai automaticamente
-        all'estrazione finale del <b>10 Agosto</b>.
     </p>
 
-    <input
-        type="text"
-        id="nome"
-        placeholder="Il tuo nome">
+    <div class="card">
 
-    <input
-        type="email"
-        id="email"
-        placeholder="La tua email">
+        <input
+            type="text"
+            id="nome"
+            placeholder="Il tuo nome">
 
-    <button id="gioca">
-        INIZIA A GIOCARE
-    </button>
+        <input
+            type="email"
+            id="email"
+            placeholder="La tua email">
 
-    <div id="loading" class="hidden">
-        <p>✨ Prepariamo il tuo Gratta e Vinci...</p>
+        <button id="inizia">
+            Inizia
+        </button>
+
     </div>
 
-    <div id="gratta" class="hidden">
+    <div id="gioco" class="hidden">
 
-    <h2>🪙 Gratta il biglietto</h2>
+        <h2>Gratta il riquadro</h2>
 
-    <div class="scratch-container">
-
-        <div id="premio" class="premio">
-            ❓ Il tuo premio è nascosto...
+        <div id="scratch">
+            GRATTA QUI
         </div>
 
-        <canvas
-            id="scratchCanvas"
-            width="320"
-            height="170">
-        </canvas>
-
     </div>
 
-</div>    <div id="risultato"></div>
+    <div id="risultato"></div>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/scratchcard-js@1.1.1/dist/scratchcard.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
