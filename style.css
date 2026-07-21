@@ -1,60 +1,129 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratta e Vinci - Creation Home Made</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    <link rel="stylesheet" href="style.css">
+body{
+    background:#f8f3f6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-</head>
+.container{
+    background:white;
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
 
-<body>
+.logo{
+    width:170px;
+    margin-bottom:20px;
+}
 
-<div class="container">
+h1{
+    color:#d46a92;
+    margin-bottom:15px;
+}
 
-    <img src="logo.png" class="logo" alt="Creation Home Made">
+.intro{
+    color:#555;
+    margin-bottom:25px;
+    line-height:1.5;
+}
 
-    <h1>🎁 Gratta e Vinci 🎁</h1>
+.card{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
 
-    <p class="intro">
-        Inserisci i tuoi dati e scopri subito se hai vinto!
-    </p>
+input{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
 
-    <div class="card">
+input:focus{
+    outline:none;
+    border-color:#d46a92;
+}
 
-        <input
-            type="text"
-            id="nome"
-            placeholder="Il tuo nome">
+button{
+    background:#d46a92;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-        <input
-            type="email"
-            id="email"
-            placeholder="La tua email">
+button:hover{
+    background:#bf557f;
+}
 
-        <button id="inizia">
-            Inizia
-        </button>
+.hidden{
+    display:none;
+}
 
-    </div>
+#gioco{
+    margin-top:30px;
+}
 
-    <div id="gioco" class="hidden">
+#scratch{
+    margin:20px auto;
+    width:260px;
+    height:120px;
+    background:linear-gradient(135deg,#c0c0c0,#8f8f8f);
+    color:white;
+    font-size:26px;
+    font-weight:bold;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    user-select:none;
+    transition:.3s;
+}
 
-        <h2>Gratta il riquadro</h2>
+#scratch:hover{
+    transform:scale(1.02);
+}
 
-        <div id="scratch">
-            GRATTA QUI
-        </div>
+#scratch.grattato{
+    background:#ffe9f1;
+    color:#d46a92;
+}
 
-    </div>
+#risultato{
+    margin-top:25px;
+    font-size:22px;
+    font-weight:bold;
+    color:#d46a92;
+    line-height:1.5;
+}
 
-    <div id="risultato"></div>
+@media(max-width:480px){
 
-</div>
+.container{
+    padding:25px;
+}
 
-<script src="script.js"></script>
+#scratch{
+    width:100%;
+    max-width:260px;
+}
 
-</body>
-</html>
+}
