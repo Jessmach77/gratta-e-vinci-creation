@@ -1,15 +1,28 @@
-const bottone = document.getElementById("inizia");
+const supabaseUrl = "https://bazubrbkwylvjgqqdurz.supabase.co";
+const supabaseKey = "sb_publishable_b8oWkbN-XRsADQ80ni10xw_Sje4LGhE";
 
-bottone.addEventListener("click", function () {
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
+document.getElementById("inizia").addEventListener("click", async () => {
 
-    if (nome === "" || email === "") {
-        alert("Inserisci nome ed email.");
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    const { data, error } = await supabase
+        .from("partecipanti")
+        .insert([
+            {
+                nome: nome,
+                email: email
+            }
+        ]);
+
+    if (error) {
+        alert(error.message);
+        console.log(error);
         return;
     }
 
-    alert("Perfetto! Il pulsante funziona.");
+    alert("Salvato con successo!");
 
 });
